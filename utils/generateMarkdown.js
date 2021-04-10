@@ -64,7 +64,7 @@ function generateMarkdown(data) {
 
       # Questions
       1. My Github Profile: "https://github.com/${data.githubID}"
-      2. My Website: "https://" + ${data.website}"
+      2. My Website: "https://${data.website}"
       3. My Email: ${data.email}
 
 `;
