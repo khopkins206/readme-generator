@@ -5,6 +5,7 @@ function renderLicenseBadge(license) {
   if (license === MIT) {
     return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
   } else return noLicense
+}
 
   // TODO: Create a function that returns the license link
   // If there is no license, return an empty string
@@ -72,11 +73,11 @@ function renderLicenseBadge(license) {
 
       # Questions
       1. <a href = "https://github.com/${data.githubID}">My Github Link</a>
-      2. <a href = "https://" + ${data.question2}">My Website</a>
+      2. <a href = "https://" + ${data.website}">My Website</a>
       3. My Email: ${data.email}
 
 `;
   }
-}
 
-module.exports = generateMarkdown;
+
+  module.exports = generateMarkdown;
