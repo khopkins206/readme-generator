@@ -19,7 +19,7 @@ const questions = [{
   {
     type: `checkbox`,
     message: `What Technologies were used?`,
-    choices: ["HTML", "CSS", "JavaScript", "BootStrap", "Materialize", "JQuery", "Moment.JS", "Node.JS", ""],
+    choices: ["HTML", "CSS", "JavaScript", "BootStrap", "Materialize", "JQuery", "Moment.JS", "Node.JS"],
     name: `tech`
   },
   {
@@ -55,7 +55,7 @@ const questions = [{
   },
   {
     type: `input`,
-    message: `What is your website URL?`,
+    message: `What is your website URL? Please include the www. and .com`,
     name: `website`
   },
   {
@@ -76,7 +76,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then(function (answers) {
 
-    writeToFile("TEST.md", generateMarkdown(answers))
+    writeToFile("README.md", generateMarkdown(answers))
   }).catch((error) => {
     console.error(error);
   });
