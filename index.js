@@ -38,7 +38,7 @@ const questions = [{
     name: `contribute`
   },
   {
-    type: `checkbox`,
+    type: `list`,
     message: `What licensing do you need?`,
     choices: ["MIT"],
     name: `license`
@@ -79,15 +79,19 @@ const questions = [{
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  // init().then((response) =>
-  fs.writeFile(fileName, data, (error) => error ? console.error("Something went wrong.") : console.log(`Success!!`))
+  fs.writeFile(fileName, data, (error) => {
+    error ? console.error("Something went wrong.") : console.log(`Success!!`)
+  })
 };
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then(function () {
-    writeToFile("README.md", generateMarkdown)
-  })
+  inquirer.prompt(questions).then(function (answers) {
+    let title = answers.title;
+    writeToFile(title, +".md", generateMarkdown(answers))
+  }).catch((error) => {
+    console.error(error);
+  });
 }
 
 // Function call to initialize app
