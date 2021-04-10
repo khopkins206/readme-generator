@@ -53,6 +53,6 @@ I tested this project using Node.JS
 
 # Questions
 
-1. My Github Profile: "https://github.com/kjackson206"
-2. This Project: "https://kjackson206.github.io/readme-generator/"
+1. My Github Profile: https://github.com/kjackson206
+2. This Project: https://kjackson206.github.io/readme-generator/
 3. My Email: katherine.jackson206@gmail.com
