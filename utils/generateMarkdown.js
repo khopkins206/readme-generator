@@ -29,43 +29,43 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
     
-      # Badge: ${renderLicenseBadge(data.license)}
+  # Badge: ${renderLicenseBadge(data.license)}
 
-      # Table of Contents
-      1. Description(#description)
-      2. Technologies Used(#tech)
-      3. Installation(#install)
-      4. Usage(#usage)
-      5. Contributions(#contribute)
-      6. License(#license)
-      7. Testing Instructions(#test)
-      8. Questions(#questions)
+  # Table of Contents
+  1. [Description](#description)
+  2. [Technologies Used](#technologies-used)
+  3. [Installation](#installation)
+  4. [Usage](#usage)
+  5. [Contributions](#contribution)
+  6. [License](#license)
+  7. [Testing Instructions](#testing-instructions)
+  8. [Questions](#questions)
 
-      # Description
-      ${data.description}
+  # Description
+  ${data.description}
 
-      # Technologies Used
-      ${data.tech}
+  # Technologies Used
+  ${data.tech}
       
-      # Installation
-      ${data.install}
+  # Installation
+  ${data.install}
 
-      # Usage
-      ${data.usage}
+  # Usage
+  ${data.usage}
 
-      # Contributions
-      ${data.contribute}
+  # Contributions
+  ${data.contribute}
 
-      # License
-      ${renderLicenseSection(data.license)}
+  # License
+  ${renderLicenseSection(data.license)}
 
-      # Testing Instructions
-      ${data.test}
+  # Testing Instructions
+  ${data.test}
 
-      # Questions
-      1. My Github Profile: "https://github.com/${data.githubID}"
-      2. My Website: "https://${data.website}"
-      3. My Email: ${data.email}
+  # Questions
+  1. My Github Profile: "https://github.com/${data.githubID}"
+  2. My Website: "https://${data.website}"
+  3. My Email: ${data.email}
 
 `;
 }
